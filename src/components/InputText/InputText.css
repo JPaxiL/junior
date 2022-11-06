@@ -1,0 +1,14 @@
+.InputText {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-green-1);
+  border: solid 1px var(--color-gray-2);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+}
+
+.InputText:focus {
+  outline: none;
+}

@@ -1,0 +1,46 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100vw;
+  height: calc(var(--height-header) - 1px);
+  border-bottom: solid 1px var(--color-gray-2);
+}
+
+.Header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Header__button {
+  padding: 0.4rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.Header ion-icon {
+  font-size: 2.8rem;
+}
+
+.Header__logo {
+  height: 60%;
+}
+
+.Header__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.Header__user {
+  border-radius: 50%;
+  height: 60%;
+}
+
+@media (min-width: 1200px) {
+  .Header__button {
+    display: none;
+  }
+}

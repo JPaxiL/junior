@@ -1,0 +1,138 @@
+.InputCalendar {
+  width: calc((3.2rem * 7) + 1.6rem);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.InputCalendar__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+}
+
+.InputCalendar__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.InputCalendar__arrow ion-icon {
+  font-size: 1.6rem;
+  color: var(--color-green-1);
+}
+
+.InputCalendar__arrow--disabled {
+  /* opacity: 0; */
+  cursor: default;
+}
+
+.InputCalendar__date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color-green-1);
+}
+
+.InputCalendar__body {
+  width: calc(3.2rem * 7);
+}
+
+.InputCalendar__body ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  row-gap: 0.4rem;
+}
+
+.InputCalendar__dayname {
+  /* font-weight: 500; */
+  /* font-size: 0.8rem; */
+  font-size: 1.2rem;
+  color: var(--color-gray-2);
+}
+
+.InputCalendar__dayname,
+.InputCalendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.InputCalendar__day span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  /* font-size: 0.9rem; */
+  font-size: 1.2rem;
+  color: var(--color-green-1);
+  cursor: pointer;
+}
+
+.InputCalendar__day--first[starton='0'] {
+  grid-column-start: 7;
+}
+
+.InputCalendar__day--first[starton='1'] {
+  grid-column-start: 1;
+}
+
+.InputCalendar__day--first[starton='2'] {
+  grid-column-start: 2;
+}
+
+.InputCalendar__day--first[starton='3'] {
+  grid-column-start: 3;
+}
+
+.InputCalendar__day--first[starton='4'] {
+  grid-column-start: 4;
+}
+
+.InputCalendar__day--first[starton='5'] {
+  grid-column-start: 5;
+}
+
+.InputCalendar__day--first[starton='6'] {
+  grid-column-start: 6;
+}
+
+.InputCalendar__day--paint {
+  background-color: var(--color-green-3);
+}
+
+.InputCalendar__day--dashed {
+  border-top: dashed 1px var(--color-gray-2);
+  border-bottom: dashed 1px var(--color-gray-2);
+}
+
+.InputCalendar__day:hover span {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.InputCalendar__day--select span,
+.InputCalendar__day--select:hover span {
+  background-color: var(--color-green-2);
+  color: var(--color-gray-4);
+}
+
+.InputCalendar__day--radiusleft {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.InputCalendar__day--radiusright {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}

@@ -1,0 +1,30 @@
+.LoginCard {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.LoginCard__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2rem 2.8rem;
+}
+
+.LoginCard img {
+  width: 36%;
+}
+
+.LoginCard__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-green-1);
+}
+
+.LoginCard__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}

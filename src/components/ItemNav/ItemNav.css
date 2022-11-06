@@ -1,0 +1,66 @@
+.NavItem {
+  width: 100%;
+}
+
+.NavItem a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+}
+
+.NavItem a,
+.NavItem span {
+  font-size: 1.6rem;
+}
+
+.NavItem ion-icon,
+.NavItem span {
+  color: var(--color-gray-1);
+}
+
+.NavItem ion-icon {
+  font-size: 2.4rem;
+}
+
+.NavItem--active a {
+  background-color: var(--color-green-3);
+}
+
+.NavItem--active a,
+.NavItem--active ion-icon,
+.NavItem--active span {
+  color: var(--color-green-2);
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .NavItem a {
+    padding: 0.5rem;
+  }
+
+  .NavItem a:hover {
+    background-color: var(--color-gray-3);
+    color: var(--color-gray-4);
+  }
+
+  .NavItem--active a:hover {
+    background-color: var(--color-green-3);
+    color: var(--color-green-2);
+  }
+
+  .NavItem ion-icon {
+    margin: 0.1rem;
+    font-size: 2rem;
+  }
+
+  .NavItem--active ion-icon {
+    color: var(--color-green-2);
+  }
+
+  .NavItem span {
+    display: none;
+  }
+}

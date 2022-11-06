@@ -1,0 +1,29 @@
+.InputSearch {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  padding: 0 0.8rem;
+  width: 100%;
+  /* min-width: 400px; */
+  max-width: 400px;
+}
+
+.InputSearch ion-icon {
+  font-size: 2.4rem;
+  color: var(--color-gray-1);
+}
+
+.InputSearch__input {
+  padding: 0 0.8rem;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+  background-color: transparent;
+  border: none;
+}
+
+.InputSearch__input:focus {
+  outline: none;
+}

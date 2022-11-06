@@ -1,0 +1,145 @@
+.Table {
+  height: 63.5vh;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.Table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.Table th,
+.Table td {
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+}
+
+.Table th,
+.Table td,
+.Table span {
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+}
+
+.Table span {
+  display: inline-flex;
+  width: max-content;
+}
+
+.Table th span {
+  padding: 0.4rem 0.8rem 0.4rem 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  color: var(--color-green-1);
+  /* background-color: aqua; */
+  cursor: pointer;
+}
+
+.Table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: solid 1px var(--color-gray-3);
+  border-top: solid 1px var(--color-gray-3);
+}
+
+.Table thead th {
+  font-weight: 500;
+  background-color: var(--color-gray-4);
+}
+
+.Table tbody tr td {
+  border-bottom: solid 1px var(--color-gray-3);
+}
+
+.Table__image img {
+  width: 36px;
+  border-radius: 50%;
+}
+
+.Table__strong span {
+  font-weight: 500;
+  color: var(--color-green-1);
+}
+
+.Table__link a {
+  font-size: 1.6rem;
+  color: var(--color-green-2);
+  text-decoration: none;
+}
+
+.Table__link a:hover {
+  text-decoration: underline;
+}
+
+.Table__phone > span {
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.Table__phone > span > span {
+  margin: 0 auto;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--color-gray-3);
+  border-radius: var(--border-radius);
+}
+
+.Table__status > span {
+  width: 100%;
+}
+
+.Table__status > span > span {
+  margin: 0 auto;
+  padding: 0.4rem 1.2rem;
+  border: solid 1px transparent;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+}
+
+.Table__status--active > span > span {
+  color: var(--color-green-2);
+  border: solid 1px var(--color-green-2);
+}
+
+.Table__status--inactive > span > span {
+  color: #eb7575;
+  border: solid 1px #eb7575;
+}
+
+.Table__date {
+  justify-content: flex-end;
+}
+
+.Table__date > span {
+  width: 100%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.Table__buttons {
+  gap: 0.8rem;
+}
+
+.Table__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.Table__button:hover {
+  background-color: var(--color-green-3);
+}
+
+.Table__button ion-icon {
+  font-size: 2rem;
+  color: var(--color-green-1);
+}

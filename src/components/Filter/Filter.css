@@ -1,0 +1,77 @@
+.Filter {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  border: solid 1px var(--color-gray-3);
+  border-radius: var(--border-radius);
+}
+
+.Filter > div {
+  border-right: solid 1px var(--color-gray-3);
+}
+
+.Filter > div:last-child {
+  border-right: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.Filter__preset {
+  display: none;
+  gap: 1.2rem;
+  padding: 0 1.2rem;
+}
+
+.Filter__option {
+  display: block;
+  padding: 0.4rem;
+  width: max-content;
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Filter__option__active {
+  color: var(--color-green-1);
+  font-weight: 500;
+}
+
+.Filter__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.Filter__button:hover {
+  background-color: var(--color-green-3);
+}
+
+.Filter__button ion-icon {
+  font-size: 2.4rem;
+  color: var(--color-green-1);
+}
+
+.Filter__button--filter {
+  display: none;
+}
+
+.Filter__button--download {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .Filter__preset {
+    display: flex;
+  }
+
+  .Filter__button--filter {
+    display: none;
+  }
+
+  .Filter__button--download {
+    display: flex;
+  }
+}

@@ -1,0 +1,40 @@
+.Nav {
+  margin-top: var(--height-header);
+  width: 100%;
+  height: calc(100% - var(--height-header));
+  background-color: var(--color-gray-4);
+  transform: translateX(-100%);
+  position: absolute;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.Nav--open {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.Nav ul {
+  display: flex;
+  padding: 2.8rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+@media (min-width: 1200px) {
+  .Nav {
+    margin: 1.2rem;
+    margin-top: calc(var(--height-header) + 1.2rem);
+    width: auto;
+    height: calc(100% - var(--height-header) - 2.4rem);
+    border-radius: var(--border-radius);
+    transform: translateX(0);
+    box-shadow: var(--box-shadow);
+  }
+
+  .Nav ul {
+    padding: 0.8rem;
+  }
+}

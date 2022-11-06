@@ -1,0 +1,112 @@
+.InputSelect {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.InputSelect__container {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  background-color: var(--color-gray-4);
+  color: var(--color-green-1);
+  width: 100%;
+  /* border: 1px solid var(--color-gray-3); */
+  border-radius: var(--border-radius);
+  /* font-size: 1.6rem; */
+
+  /* box-shadow: -1px -1px 15px -2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -1px -1px 15px -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -1px -1px 15px -2px rgba(0, 0, 0, 0.1); */
+
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+
+  order: 1;
+  top: calc(100% + 0.4rem);
+  position: absolute;
+  z-index: 2;
+}
+
+.InputSelect__selected {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 0 1.2rem;
+  padding-right: 3.2rem;
+  min-width: 10rem;
+  height: 100%;
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+  position: relative;
+
+  order: 0;
+}
+
+.InputSelect__selected--placeholder {
+  color: #bbbfce;
+}
+
+.InputSelect__selected::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23808080' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.6rem 1.2rem;
+
+  position: absolute;
+  height: 100%;
+  width: 3.2rem;
+  right: 0;
+  top: 0;
+
+  transition: all 0.4s;
+}
+
+.InputSelect__container--active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.InputSelect__container--active + .InputSelect__selected::after {
+  transform: rotateX(180deg);
+}
+
+.InputSelect__option,
+.InputSelect__selected {
+  cursor: pointer;
+}
+
+.InputSelect__option:hover {
+  background: var(--color-green-3);
+}
+
+.InputSelect label {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.InputSelect__radio {
+  display: none;
+}
+
+.InputSelect__radio:checked + label {
+  background-color: var(--color-green-2);
+  color: var(--color-gray-4);
+}
+
+@media (min-width: 480px) {
+  .InputSelect {
+    display: flex;
+  }
+}
